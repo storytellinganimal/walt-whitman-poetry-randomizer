@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400;1,500&display=swap');
+
+:root {
+    --light-yellow: #FEFFC3;
+    --yellow: #EDF200;
+    --light-green: #C3FFD1;
+    --green: #7BFF98;
+    --light-blue: #C3E2FF;
+    --blue: #379FFF;
+    --light-lila: #CFC3FF;
+    --lila: #9E86FF;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'EB Garamond',  serif;
+    font-size: 24px;
+    height: 100vh;
+    background-color: var(--light-yellow);
+    background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0));
+}
+
+section {
+    position: fixed;
+    left: 4.5%;
+    top: 4.5%;
+
+}
+
+h5 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.8rem;
+    margin-bottom: 25vmin;
+}
+
+h1 {
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 104%;
+    text-transform: capitalize;
+    font-feature-settings: 'case' on;
+    color: #000000;
+    max-width: 700px;
+    margin: 0;
+}
+
+section p {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.8rem;
+    margin: 0.5rem 0;
+}
+
+.indent {
+    margin-left: em;
+}
+
+.versaillen {
+    font-variant-caps: small-caps;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
+
+hr {
+    border: 2px solid ;
+    margin: 3rem 0;
+    width: 6rem;
+}
+
