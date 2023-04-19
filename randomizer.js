@@ -18,8 +18,10 @@ const previousTag = document.querySelector("footer img.prev")
 const randomTag = document.querySelector("footer img.random")
 const titleTag = document.querySelector("h1")
 const poemTag = document.querySelector("section div.poem-text")
+const poem = document.querySelector("section div.poem")
 const diamondTag = document.querySelector("section div.diamond")
 const bodyTag = document.querySelector("body")
+const backgroundTag = document.querySelector(".background")
 const footerTag = document.querySelector("footer")
 
 
@@ -57,11 +59,23 @@ const random = function () {
 
 // update content & style functions
 function updateSection() {
+
+
+    // Ausblenden ohne Transition
+    poem.style.opacity = 0;
+    poem.style.transition = "none";
+
+    // 3 Millisekunden warten, dann mit Transition einblenden
+    setTimeout( ()=> {
+        poem.style.transition = "opacity .5s linear";
+        poem.style.opacity = 1;
+    }, 3 );
+
     titleTag.innerHTML = pages[pageNumber].title
     poemTag.innerHTML = pages[pageNumber].poem
     diamondTag.style.background = pages[pageNumber].diamond
-    bodyTag.style.backgroundColor = pages[pageNumber].background
-    footerTag.style.backgroundColor = pages[pageNumber].background
+    backgroundTag.style.backgroundColor = pages[pageNumber].background
+    // footerTag.style.backgroundColor = pages[pageNumber].background
 }
 
 

@@ -18,13 +18,27 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'EB Garamond',  serif;
+body {
+    font-family: 'EB Garamond', serif;
     font-size: 24px;
-    height: 104vh;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+}
+
+.background{
     background-color: var(--light-yellow);
     background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0));
     transition: background-color 2s;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    bottom:0;
+
 }
 
 /* Text Style */
@@ -43,7 +57,7 @@ h1 {
     font-size: 72px;
     line-height: 104%;
     text-transform: capitalize;
-    font-feature-settings: 'case' on;
+    font-feature-settings: 'case'on;
     color: #000000;
     max-width: 700px;
     margin: 0;
@@ -74,37 +88,82 @@ section {
     position: absolute;
     left: 4.5%;
     top: 4.5%;
-    overflow-y: scroll;
     animation: fadeIn ease 1s;
     -webkit-animation: fadeIn ease 1s;
     -moz-animation: fadeIn ease 1s;
     -o-animation: fadeIn ease 1s;
-    -ms-animation: fadeIn easeIn 5s; 
+    -ms-animation: fadeIn easeIn 5s;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
   }
   
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
   }
   
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6e74ca;
   }
   
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a10f0f;
   }
 
 
@@ -126,7 +185,7 @@ section .diamond {
     background: #EDF200;
     transform: rotate(45deg);
     transition: background-color 2s;
-    
+
 }
 
 section a {
@@ -138,15 +197,28 @@ section a {
 section div.poem {
     margin-top: 20vmin;
     margin-bottom: 10vmin;
-    max-width: 90%;
+    /* max-width: 90%; */
+    width: calc( 100vw - 7.5% );
+    height: calc( 80vh - 130px);
+    padding-right: 25%;
+    
+    /* border: 1px solid green; */
+
+    height: 50vh;
+    /* border: 1px solid red; */
+    overflow-y: auto;
+   
+
 }
 
 section div.poem-text {
-    overflow: scroll;
+    /* overflow: scroll; */
+    /* overflow-y: auto; */
+    /* height: 30vh; */
 }
 
 hr {
-    border: 2px solid ;
+    border: 2px solid;
     margin: 3rem 0;
     width: 6rem;
 }
@@ -161,7 +233,7 @@ footer {
     left: 0;
     width: 100%;
     padding: 36px;
-    background-color: var(--light-yellow); 
+    /* background-color: var(--light-yellow); */
     transition: background-color 2s;
 }
 
@@ -170,18 +242,19 @@ footer img {
 }
 
 .arrows img {
+    user-select: none;
     width: 20px;
     cursor: pointer;
 }
 
 /* mobile */
 @media screen and (max-width: 488px) {
-    
+
     /* global */
     body {
         max-width: 100vw;
 
-    }    
+    }
 
     /* text */
     h5 {
@@ -199,20 +272,20 @@ footer img {
         text-indent: -24px;
         padding-left: 24px;
     }
- 
+
     /* section */
     section {
-            top: 4rem;
-            left: 2rem;
+        top: 4rem;
+        left: 2rem;
     }
 
     /* section header */
-     section div.header {
+    section div.header {
         margin-top: 0;
         gap: 14px;
     }
 
-     section .diamond {
+    section .diamond {
         width: 10px;
         height: 10px;
     }
@@ -222,8 +295,8 @@ footer img {
         margin-top: 3rem;
     }
 
-     hr {
-        border: 1px solid ;
+    hr {
+        border: 1px solid;
         margin: 2rem 0;
         width: 4rem;
     }
@@ -235,8 +308,8 @@ footer img {
 
     .arrows img {
         width: 14px;
-    }    
-} 
+    }
+}
 
 
 /* 
