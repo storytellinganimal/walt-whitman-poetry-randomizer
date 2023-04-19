@@ -9,9 +9,11 @@
     --blue: #379FFF;
     --light-lila: #CFC3FF;
     --lila: #9E86FF;
+    --light-lilac: #F5D9FF;
+    --lilac: #E086FF;
 }
 
-
+/* global */
 * {
     box-sizing: border-box;
 }
@@ -19,14 +21,13 @@
 body{
     font-family: 'EB Garamond',  serif;
     font-size: 24px;
-    height: 100vh;
+    height: 104vh;
     background-color: var(--light-yellow);
     background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0));
     transition: background-color 2s;
 }
 
 /* Text Style */
-
 h5 {
     font-family: 'EB Garamond', serif;
     font-weight: 400;
@@ -58,30 +59,56 @@ section p {
     margin: 0.5rem 0;
 }
 
-
-
-.indent {
-    margin-left: 1em;
-}
-
 .versaillen {
     font-variant-caps: small-caps;
     letter-spacing: 0.1rem;
     font-weight: 500;
 }
 
-hr {
-    border: 2px solid ;
-    margin: 3rem 0;
-    width: 6rem;
+.space {
+    padding-top: 1rem;
 }
 
+/* section box */
 section {
-    position: fixed;
+    position: absolute;
     left: 4.5%;
     top: 4.5%;
+    overflow-y: scroll;
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn easeIn 5s; 
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+/* section header */
 section div.header {
     display: flex;
     flex-direction: row;
@@ -89,6 +116,8 @@ section div.header {
     padding: 0px;
     gap: 20px;
     margin-top: 1rem;
+    margin-left: 3px;
+    position: fixed;
 }
 
 section .diamond {
@@ -97,14 +126,32 @@ section .diamond {
     background: #EDF200;
     transform: rotate(45deg);
     transition: background-color 2s;
+    
 }
 
+section a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* section poem */
 section div.poem {
     margin-top: 20vmin;
     margin-bottom: 10vmin;
     max-width: 90%;
 }
 
+section div.poem-text {
+    overflow: scroll;
+}
+
+hr {
+    border: 2px solid ;
+    margin: 3rem 0;
+    width: 6rem;
+}
+
+/* footer */
 footer {
     position: fixed;
     display: flex;
@@ -114,6 +161,8 @@ footer {
     left: 0;
     width: 100%;
     padding: 36px;
+    background-color: var(--light-yellow); 
+    transition: background-color 2s;
 }
 
 footer img {
@@ -122,32 +171,26 @@ footer img {
 
 .arrows img {
     width: 20px;
+    cursor: pointer;
 }
 
-
-
+/* mobile */
 @media screen and (max-width: 488px) {
+    
+    /* global */
     body {
         max-width: 100vw;
+
     }    
 
+    /* text */
     h5 {
-        font-size: 18px;
+        font-size: 16px;
+        letter-spacing: 0.3px;
     }
 
     h1 {
-        font-size: 32px;
-    }
-
-    hr {
-        border: 1px solid ;
-        margin: 2rem 0;
-        width: 4rem;
-    }
-
-    section {
-        top: 2rem;
-        left: 2rem;
+        font-size: 28px;
     }
 
     section p {
@@ -156,17 +199,50 @@ footer img {
         text-indent: -24px;
         padding-left: 24px;
     }
-
-    section div.header {
-        margin-top: 0;
+ 
+    /* section */
+    section {
+            top: 4rem;
+            left: 2rem;
     }
 
+    /* section header */
+     section div.header {
+        margin-top: 0;
+        gap: 14px;
+    }
+
+     section .diamond {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* section poem */
     section div.poem {
-        margin-top: 10%;
+        margin-top: 3rem;
+    }
+
+     hr {
+        border: 1px solid ;
+        margin: 2rem 0;
+        width: 4rem;
+    }
+
+    /* footer */
+    footer {
+        padding: 24px;
     }
 
     .arrows img {
-        width: 16px;
-    }
-    
-}
+        width: 14px;
+    }    
+} 
+
+
+/* 
+ISSUES:
+- overflow scrolling funktioniert nicht
+- fadeIn funktioniert nicht
+- buttons unten sollten nicht über den Text kommen (.poem-text div sollte BIS zum footer gehen)
+
+*/
