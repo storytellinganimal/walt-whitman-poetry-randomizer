@@ -209,15 +209,11 @@ footer img {
         padding-left: 24px;
     }
 
-    /* section */
-    /* section {
-        margin-top: 1rem;
-        margin-left: 1rem;
-    } */
+
 
     /* section header */
     section div.header {
-        margin-top: 2;
+        margin-top: 1rem;
         gap: 14px;
         padding: 0 1rem;
     }
