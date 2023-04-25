@@ -190,7 +190,6 @@ footer img {
     /* global */
     body {
         max-width: 100vw;
-
     }
 
     /* text */
@@ -211,15 +210,16 @@ footer img {
     }
 
     /* section */
-    section {
-        top: 4rem;
-        left: 2rem;
-    }
+    /* section {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    } */
 
     /* section header */
     section div.header {
-        margin-top: 0;
+        margin-top: 2;
         gap: 14px;
+        padding: 0 1rem;
     }
 
     section .diamond {
@@ -229,15 +229,14 @@ footer img {
 
     /* section poem */
     section div.poem {
-        margin-top: 5rem;
+        margin-top: 6rem;
+        margin-left: 1rem;
         margin-bottom: 10vmin;
-        width: calc( 100vw - 20% );
-        /* height: calc( 80vh - 130px); */
-        padding-right: 25%;
-        height: 60vh;
+        height: 70vh;
+        padding-right: 3rem;
+        width: 90vw;
         /* border: 1px solid red; */
         overflow-y: auto;
-    }
     }
 
     hr {
@@ -265,7 +264,6 @@ footer img {
         top: 0;
         bottom:0;
     }   
-
 
 }
 
