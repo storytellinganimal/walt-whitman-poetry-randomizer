@@ -24,9 +24,7 @@ body {
     height: 90vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    
-    
+    overflow: hidden; 
 }
 
 .background{
@@ -38,7 +36,6 @@ body {
     position:absolute;
     top: 0;
     bottom:0;
-
 }
 
 /* Text Style */
@@ -89,81 +86,27 @@ section {
     left: 4.5%;
     top: 4.5%;
     animation: fadeIn ease 1s;
-    -webkit-animation: fadeIn ease 1s;
-    -moz-animation: fadeIn ease 1s;
-    -o-animation: fadeIn ease 1s;
-    -ms-animation: fadeIn easeIn 5s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 
-/* width */
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 5px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(255, 255, 255, 0);
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #6e74ca;
+    background: rgba(103, 103, 103, 0.231);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #a10f0f;
+    background: rgba(103, 103, 103, 0.231);
   }
 
 
@@ -197,18 +140,12 @@ section a {
 section div.poem {
     margin-top: 20vmin;
     margin-bottom: 10vmin;
-    /* max-width: 90%; */
     width: calc( 100vw - 7.5% );
-    height: calc( 80vh - 130px);
+    /* height: calc( 80vh - 130px); */
     padding-right: 25%;
-    
-    /* border: 1px solid green; */
-
-    height: 50vh;
+    height: 60vh;
     /* border: 1px solid red; */
     overflow-y: auto;
-   
-
 }
 
 section div.poem-text {
@@ -292,7 +229,15 @@ footer img {
 
     /* section poem */
     section div.poem {
-        margin-top: 3rem;
+        margin-top: 5rem;
+        margin-bottom: 10vmin;
+        width: calc( 100vw - 20% );
+        /* height: calc( 80vh - 130px); */
+        padding-right: 25%;
+        height: 60vh;
+        /* border: 1px solid red; */
+        overflow-y: auto;
+    }
     }
 
     hr {
@@ -309,6 +254,19 @@ footer img {
     .arrows img {
         width: 14px;
     }
+
+    .background{
+        background-color: var(--light-yellow);
+        background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0));
+        transition: background-color 2s;
+        width: 100vw;
+        height: 100vh;
+        position:absolute;
+        top: 0;
+        bottom:0;
+    }   
+
+
 }
 
 
