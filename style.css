@@ -213,7 +213,7 @@ footer img {
 
     /* section header */
     section div.header {
-        margin-top: 1rem;
+        margin-top: 2rem;
         gap: 14px;
         padding: 0 1rem;
     }
@@ -228,7 +228,7 @@ footer img {
         margin-top: 6rem;
         margin-left: 1rem;
         margin-bottom: 10vmin;
-        height: 70vh;
+        height: 60vh;
         padding-right: 3rem;
         width: 90vw;
         /* border: 1px solid red; */
