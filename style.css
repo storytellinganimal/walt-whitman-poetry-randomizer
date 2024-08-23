@@ -33,7 +33,7 @@ body {
     transition: background-color 2s;
     width: 100%;
     height: 100%;
-    position:absolute;
+    position: absolute;
     top: 0;
     bottom:0;
 }
@@ -128,7 +128,6 @@ section .diamond {
     background: #EDF200;
     transform: rotate(45deg);
     transition: background-color 2s;
-
 }
 
 section a {
@@ -146,12 +145,6 @@ section div.poem {
     height: 60vh;
     /* border: 1px solid red; */
     overflow-y: auto;
-}
-
-section div.poem-text {
-    /* overflow: scroll; */
-    /* overflow-y: auto; */
-    /* height: 30vh; */
 }
 
 hr {
@@ -208,8 +201,6 @@ footer img {
         text-indent: -24px;
         padding-left: 24px;
     }
-
-
 
     /* section header */
     section div.header {

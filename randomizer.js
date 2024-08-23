@@ -54,12 +54,8 @@ const random = function () {
     updateSection()
 }
 
-
-
-
 // update content & style functions
 function updateSection() {
-
 
     // Ausblenden ohne Transition
     poem.style.opacity = 0;
@@ -81,7 +77,7 @@ function updateSection() {
 
 // on click events 
 nextTag.addEventListener("click", function () {
-    next()
+    next() 
 })
 
 previousTag.addEventListener("click", function () {
